@@ -1,5 +1,7 @@
 import React from "react";
 
-export function helloName(name){
-    return <h1>Hello, {name}</h1>
+export default class Hello extends React.Component {
+    render(){
+        return <h1>Hello, World</h1>
+    }
 }
