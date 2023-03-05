@@ -1,5 +1,14 @@
 import React from "react";
+import { Hello }  from "./Hello"
+import { Welcome } from "./Welcome";
 
-export function helloName(name){
-    return <h1>Hello, {name}</h1>
+export default class App extends React.Component{
+    render(){
+        return (
+            <div>
+                <Hello />
+                <Welcome name="John" age="5"/>
+            </div>
+        )
+    }
 }
