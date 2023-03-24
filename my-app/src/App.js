@@ -1,5 +1,15 @@
 import React from "react";
+import { UncontrolledLogin } from "./UncontrolledLogin";
 
-export function helloName(name){
-    return <h1>Hello, {name}</h1>
+export default class App extends React.Component{
+    onlogin(state){
+        console.log(state)
+    }
+    render(){
+        return (
+            <div>
+                <UncontrolledLogin/>
+            </div>
+        )
+    }
 }
