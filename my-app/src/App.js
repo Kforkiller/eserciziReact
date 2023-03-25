@@ -1,5 +1,10 @@
-import React from "react";
 
-export function helloName(name){
-    return <h1>Hello, {name}</h1>
+import { Welcome } from "./Welcome";
+
+export default function App() {
+    return (
+        <div>
+            <Welcome name="Antonio"/>
+        </div>
+    );
 }
