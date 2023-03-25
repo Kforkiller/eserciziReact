@@ -1,5 +1,9 @@
-import React from "react";
+import { UncontrolledLogin } from "./UncontrolledLogin";
 
-export function helloName(name){
-    return <h1>Hello, {name}</h1>
+export default function App() {
+    return (
+        <div>
+            <UncontrolledLogin/>
+        </div>
+    );
 }
