@@ -1,5 +1,15 @@
 import React from "react";
+import { GitHubUser } from "./GitHubUser";
+import { GitHubUserList } from "./GitHubUserList";
 
-export function helloName(name){
-    return <h1>Hello, {name}</h1>
+export default class App extends React.Component {
+
+  render() {
+    return (
+    <div>
+        <GitHubUserList/>
+        <GitHubUser username="Kforkiller"/>
+    </div>
+    )
+  }
 }
