@@ -1,5 +1,13 @@
 import React from "react";
+import { Form } from "./Form";
 
-export function helloName(name){
-    return <h1>Hello, {name}</h1>
+export default class App extends React.Component {
+
+  render() {
+    return (
+    <div>
+        <Form/>
+    </div>
+    )
+  }
 }
