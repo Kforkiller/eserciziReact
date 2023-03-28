@@ -1,12 +1,12 @@
 import React from "react";
-import { Form } from "./Form";
+import GitHubUser from "./GitHubUser";
 
 export default class App extends React.Component {
 
   render() {
     return (
     <div>
-        <Form/>
+        <GitHubUser username="Kforkiller"/>
     </div>
     )
   }
