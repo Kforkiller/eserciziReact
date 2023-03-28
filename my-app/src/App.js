@@ -1,12 +1,18 @@
 import React from "react";
-import { Form } from "./Form";
+import { CarDetails } from "./CarDetails";
 
 export default class App extends React.Component {
 
   render() {
     return (
     <div>
-        <Form/>
+        <CarDetails initialInfo={
+                    {
+                        model: "Mercedes",
+                        year: 2022,
+                        color: "Black Opaque"
+                    }
+                } />
     </div>
     )
   }
