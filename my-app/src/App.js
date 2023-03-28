@@ -1,13 +1,27 @@
 import React from "react";
-import { Form } from "./Form";
+import { DisplayLanguage } from "./DisplayLanguage";
+import { LanguageContext } from "./LanguageContext";
 
-export default class App extends React.Component {
-
-  render() {
-    return (
-    <div>
-        <Form/>
-    </div>
-    )
-  }
+export default class App extends React.Component{
+    state = {
+        language: "en"
+    }
+    
+    render(){
+        return (
+            <div>
+                <select onChange={(evt) => {
+                    this.setState({
+                        language: evt.target.value
+                    })
+                }}>
+                    <option value="en">English</option>
+                    <option value="it">Italiano</option>
+                </select>
+                <LanguageContext.Provider value={this.state.language}>
+                    <DisplayLanguage />
+                </LanguageContext.Provider>
+            </div>
+        )
+    }
 }
