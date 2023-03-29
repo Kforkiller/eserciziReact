@@ -1,13 +1,20 @@
 import React from "react";
-import { Form } from "./Form";
+import { Link, Route, Routes } from "react-router-dom"
+import { Welcome } from "./Welcome";
+import { Counter } from "./Counter";
+import { ShowGitUser } from "./ShowGitUser";
 
-export default class App extends React.Component {
-
-  render() {
+export function App() {
     return (
-    <div>
-        <Form/>
-    </div>
+        <div>
+            <div>
+                <Link to="/">Home</Link> | <Link to="/counter">Counter</Link>
+            </div>
+            <Routes>
+                <Route path="/" element={<Welcome name="Antonio" age={24} />} />
+                <Route path="/counter" element={<Counter/>} />
+                <Route path="/users/:username" element={<ShowGitUser/>} />
+            </Routes>
+        </div>
     )
-  }
 }
